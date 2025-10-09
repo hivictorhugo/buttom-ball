@@ -1,4 +1,31 @@
-.ball {
-    width: 50px;
-    border-radius: 20px;
+.app-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111311; /* subtle background around the field */
+}
+
+/* Phaser creates a canvas element inside the body. Center and prevent selection. */
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+    image-rendering: optimizeSpeed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* HUD text classes (if you later want to use DOM for HUD) */
+.hud {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
 }
